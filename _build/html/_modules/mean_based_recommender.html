@@ -43,7 +43,25 @@
 <span class="sd">based on the items mean ratings provided from the users </span>
 <span class="sd">&quot;&quot;&quot;</span>
 <div class="viewcode-block" id="ItemMeanModelProvider"><a class="viewcode-back" href="../docs/mean_based_recommender.html#mean_based_recommender.ItemMeanModelProvider">[docs]</a><span class="k">class</span> <span class="nc">ItemMeanModelProvider</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; This class provides a model to recommend items based on their mean ratings by the</span>
+<span class="sd">    users. The model uses the number of items to recommends and provides the list of top </span>
+<span class="sd">    rated items based on their average ratings</span>
+<span class="sd">    </span>
+<span class="sd">    Raises:</span>
+<span class="sd">        TypeError -- [description]</span>
+<span class="sd">        ValueError -- [description]</span>
+<span class="sd">    </span>
+<span class="sd">    Returns:</span>
+<span class="sd">        [type] -- [description]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_top_rated</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;[summary]</span>
+<span class="sd">        </span>
+<span class="sd">        Arguments:</span>
+<span class="sd">            num_top_rated {[type]} -- [description]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
         <span class="bp">self</span><span class="o">.</span><span class="n">num_top_rated</span><span class="o">=</span><span class="n">num_top_rated</span>
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">num_top_rated</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
