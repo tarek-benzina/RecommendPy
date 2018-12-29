@@ -1,5 +1,7 @@
-
-
+"""
+The mean based recommender provides the possiblity to generate recommendations
+based on the items mean ratings provided from the users 
+"""
 class ItemMeanModelProvider:
     def __init__(self, num_top_rated):
         self.num_top_rated=num_top_rated
