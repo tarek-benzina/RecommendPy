@@ -14,9 +14,7 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('.'))
-sys.path.append('/Users/Tarek Benzina/Documents/recommenders/RecommendPy/non_personalized')
-
+sys.path.insert(0, os.path.abspath('/Users/Tarek Benzina/Documents/recommenders/RecommendPy/non_personalized/'))
 
 # -- Project information -----------------------------------------------------
 
@@ -73,7 +71,7 @@ language = None
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = None
+pygments_style = 'friendly'
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -135,7 +133,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'RecommenderEngine.tex', 'RecommenderEngine Documentation',
+    (master_doc, 'RecommenderEngine.tex', 'Recommender Engine Documentation',
      'Tarek Benzina', 'manual'),
 ]
 
@@ -145,7 +143,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'recommenderengine', 'RecommenderEngine Documentation',
+    (master_doc, 'recommenderengine', 'Recommender Engine Documentation',
      [author], 1)
 ]
 

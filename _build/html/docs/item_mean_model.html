@@ -1,0 +1,152 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>item_mean_model module &#8212; RecommenderEngine 1.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">RecommenderEngine 1.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-item_mean_model">
+<span id="item-mean-model-module"></span><h1>item_mean_model module<a class="headerlink" href="#module-item_mean_model" title="Permalink to this headline">¶</a></h1>
+<p>The item_mean_model module provides a class ItemMeanModel to store the mean ratings model</p>
+<dl class="class">
+<dt id="item_mean_model.ItemMeanModel">
+<em class="property">class </em><code class="descclassname">item_mean_model.</code><code class="descname">ItemMeanModel</code><span class="sig-paren">(</span><em>means</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/item_mean_model.html#ItemMeanModel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#item_mean_model.ItemMeanModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The class containerizes the frozenset of mean ratings and provides methods to access it.</p>
+<dl class="docutils">
+<dt>Attributes:</dt>
+<dd>means {dict} – python dictionary with keys are the item ids and values are the mean rating</dd>
+</dl>
+<dl class="method">
+<dt id="item_mean_model.ItemMeanModel.get_known_items">
+<code class="descname">get_known_items</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/item_mean_model.html#ItemMeanModel.get_known_items"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#item_mean_model.ItemMeanModel.get_known_items" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the ids of the known items which are the keys of the attribute means</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>list – list of integer with item ids</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="item_mean_model.ItemMeanModel.get_mean_rating">
+<code class="descname">get_mean_rating</code><span class="sig-paren">(</span><em>item_id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/item_mean_model.html#ItemMeanModel.get_mean_rating"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#item_mean_model.ItemMeanModel.get_mean_rating" title="Permalink to this definition">¶</a></dt>
+<dd><p>return the mean rating of some item_id if it is known by the model</p>
+<dl class="docutils">
+<dt>Arguments:</dt>
+<dd>item_id {integer} – an item id</dd>
+<dt>Raises:</dt>
+<dd>ValueError – if the item_id is unkown by the model</dd>
+<dt>Returns:</dt>
+<dd>float – mean rating corresponding to the item_id</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="item_mean_model.ItemMeanModel.has_item">
+<code class="descname">has_item</code><span class="sig-paren">(</span><em>item_id</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/item_mean_model.html#ItemMeanModel.has_item"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#item_mean_model.ItemMeanModel.has_item" title="Permalink to this definition">¶</a></dt>
+<dd><p>check if a given item_id is part of the known items</p>
+<dl class="docutils">
+<dt>Arguments:</dt>
+<dd>item_id {integer} – an id of some item to check its existence</dd>
+<dt>Returns:</dt>
+<dd>boolean – True if the item_id is part of the list of known item and False otherwise</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="item_mean_model.ItemMeanModel.means">
+<code class="descname">means</code><a class="headerlink" href="#item_mean_model.ItemMeanModel.means" title="Permalink to this definition">¶</a></dt>
+<dd><p>getter of the attribute means</p>
+<dl class="docutils">
+<dt>Returns:</dt>
+<dd>dict – dictionary with item id as keys and mean ratings as values</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="../py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="../genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+              <br/>
+              <a href="../_sources/docs/item_mean_model.rst.txt"
+                rel="nofollow">Show Source</a>
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, Tarek Benzina.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.2.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,3 +1,12 @@
+"""Creates a model based on the ItemMeanModel, and computes the mean rating for each item
+by adding a new method called get that returns an ItemMeanModel based on the computed means
+
+Raises:
+    TypeError -- Raises an error if the input (ratings) is not a pandas dataframe
+
+Returns:
+    ItemMeanModel -- Model with the items ids and their mean ratings
+"""
 from item_mean_model import ItemMeanModel
 import pandas as pd
 class ItemMeanModelProvider(ItemMeanModel):

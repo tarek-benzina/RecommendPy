@@ -1,1 +1,1 @@
-import non_personalized.mean_based_recommender
+import non_personalized.item_mean_model_provider 
